@@ -16,7 +16,7 @@ def main(host='0.0.0.0', port=45000):
     s.bind((host, port))
     s.listen(1)
     s.settimeout(30)
-
+    logger.info('Listening at {}:{}'.format(host, port))
     while True:
         try:
             connection, address = s.accept()
